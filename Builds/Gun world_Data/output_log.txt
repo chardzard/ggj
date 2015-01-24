@@ -16,7 +16,7 @@ Platform assembly: C:\Users\Raphael\Documents\GitHub\ggj\Builds\Gun world_Data\M
 Loading C:\Users\Raphael\Documents\GitHub\ggj\Builds\Gun world_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
 Platform assembly: C:\Users\Raphael\Documents\GitHub\ggj\Builds\Gun world_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Users\Raphael\Documents\GitHub\ggj\Builds\Gun world_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.051 seconds
+- Completed reload, in  0.089 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 XInput1_3.dll not found.
@@ -24,3 +24,11 @@ XInput1_3.dll not found.
 Platform assembly: C:\Users\Raphael\Documents\GitHub\ggj\Builds\Gun world_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Raphael\Documents\GitHub\ggj\Builds\Gun world_Data\Managed\System.dll (this message is harmless)
 Platform assembly: C:\Users\Raphael\Documents\GitHub\ggj\Builds\Gun world_Data\Managed\Boo.Lang.dll (this message is harmless)
+Locking cursor
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Unlocking cursor
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
