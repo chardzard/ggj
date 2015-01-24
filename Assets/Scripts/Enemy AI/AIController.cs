@@ -7,6 +7,7 @@ public class AIController : MonoBehaviour {
 
 	public int health;
 	public AbstractWeapon weaponPrefab;
+	private AbstractWeapon weapon;
 	GameObject agent;
 	GameObject player;
 
