@@ -2,6 +2,7 @@
 using System.Collections;
 
 public abstract class AbstractWeapon : MonoBehaviour {
+	public Bullet bulletPrefab;
 	protected int maxAmmo;
 	protected int currentAmmo;
 	protected float fireRate;
