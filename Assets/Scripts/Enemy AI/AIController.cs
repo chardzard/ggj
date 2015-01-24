@@ -25,17 +25,29 @@ public class AIController : MonoBehaviour {
 	}
 
     void OnTriggerEnter(Collider other) {
-        other.gameObject.SetActive(false);
-        PickupController current = other.GetComponent<PickupController>();
+        GameObject[] spawners = GameObject.FindGameObjectsWithTag("Spawner");
+        Vector3 closest = new Vector3(99999, 99999, 99999);
+        GameObject closestObj = null;
+        foreach (GameObject obj in spawners)
+        {
+            Vector3 currentPos = obj.transform.position - agent.transform.position;
+            if (currentPos.magnitude < closest.magnitude)
+            {
+                closest = currentPos;
+                closestObj = obj;
+            }
+        }
+        PickupController currentObj = other.GetComponent<PickupController>();
+        currentObj.gameObject.SetActive(false);
         int weaponOrAmor = Random.Range(0, 2);
         if (weaponOrAmor == 0)
         {
-            inventory.Attack = current.type;
+            inventory.Attack = currentObj.type;
             Debug.Log("Attack " + inventory.Attack);
         }
         else
         {
-            inventory.Defence = current.type;
+            inventory.Defence = currentObj.type;
             Debug.Log("Defence " + inventory.Defence);
         }
     }

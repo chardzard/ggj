@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  weaponPrefab: {fileID: 11479894, guid: 1b1b7cf33df029b46a7d4f06968951a2, type: 2}
 --- !u!114 &11407274
 MonoBehaviour:
   m_ObjectHideFlags: 1
