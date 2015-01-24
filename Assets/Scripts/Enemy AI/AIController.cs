@@ -6,21 +6,36 @@ public class AIController : MonoBehaviour {
     private Inventory inventory;
 
 	public int health;
-	public AbstractWeapon weaponPrefab;
+	public AbstractWeapon[] weaponPrefabs;
 	private AbstractWeapon weapon;
+	public Vector3 weaponOffsetPosition;
+	public Quaternion weaponOffsetRotation;
 	public GameObject agent;
-	GameObject player;
+	GameObject target;
 
 	void Start () {
-		player = GameObject.FindGameObjectWithTag("Player");
+		target = GameObject.FindGameObjectWithTag("Player");
         inventory = GetComponent<Inventory>();
-		weapon = Instantiate(weaponPrefab, transform.position + new Vector3(10, 0, -5), transform.rotation) as AbstractWeapon;
+		weapon = Instantiate(weaponPrefabs[0], transform.position + weaponOffsetPosition, transform.rotation) as AbstractWeapon;
+		weapon.transform.SetParent (transform, false);
 	}
 	
 	void Update () {
 		//Test firing stuff - aim at player and shoot
-		if ((transform.position - player.transform.position).magnitude < weapon.SuggestedRange) {
-			weapon.Fire (gameObject);
+		Vector3 directionalDistance = transform.position - target.transform.position;
+		if (directionalDistance.magnitude < weapon.SuggestedRange) {
+			/*RaycastHit hitInfo;
+			Physics.Raycast(transform.position, directionalDistance, out hitInfo);
+			//If we can see target, face to it
+			if (hitInfo.rigidbody.gameObject == target) {
+				transform.Rotate (*/
+
+
+			if(weapon.CurrentAmmo > 0) {
+				weapon.Fire (gameObject);
+			} else if (weapon.CurrentAmmo <= 0) {
+				//Swap back to default ammo
+			}
 		}
         if(health <= 0)
         {

@@ -39,8 +39,5 @@ public abstract class AbstractWeapon : MonoBehaviour {
 		get { return gunPoint; }
 	}
 	
-	public bool Fire(GameObject shooter) {
-		currentAmmo--;
-		return true;
-	}
+	public abstract bool Fire (GameObject shooter);
 }
