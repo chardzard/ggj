@@ -22,7 +22,8 @@ public class BulletNone : Bullet {
         }
         else if(other.tag == "Enemy")
         {
-
+            AIController hit = other.GetComponent<AIController>();
+            hit.health -= 5;
         }
         Destroy(gameObject);
     }

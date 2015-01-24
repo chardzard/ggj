@@ -8,7 +8,7 @@ public class AIController : MonoBehaviour {
 	public int health;
 	public AbstractWeapon weaponPrefab;
 	private AbstractWeapon weapon;
-	GameObject agent;
+	public GameObject agent;
 	GameObject player;
 
 	void Start () {
@@ -22,33 +22,42 @@ public class AIController : MonoBehaviour {
 		if ((transform.position - player.transform.position).magnitude < weapon.SuggestedRange) {
 			weapon.Fire (gameObject);
 		}
+        if(health <= 0)
+        {
+
+        }
 	}
 
     void OnTriggerEnter(Collider other) {
-        GameObject[] spawners = GameObject.FindGameObjectsWithTag("Spawner");
-        Vector3 closest = new Vector3(99999, 99999, 99999);
-        GameObject closestObj = null;
-        foreach (GameObject obj in spawners)
+        if (other.gameObject.tag == "Pickup")
         {
-            Vector3 currentPos = obj.transform.position - agent.transform.position;
-            if (currentPos.magnitude < closest.magnitude)
+            GameObject[] spawners = GameObject.FindGameObjectsWithTag("Spawner");
+            Vector3 closest = new Vector3(99999, 99999, 99999);
+            GameObject closestSpawn = null;
+            foreach (GameObject obj in spawners)
             {
-                closest = currentPos;
-                closestObj = obj;
+                Vector3 currentPos = obj.transform.position - agent.transform.position;
+                if (currentPos.magnitude < closest.magnitude)
+                {
+                    closest = currentPos;
+                    closestSpawn = obj;
+                }
             }
-        }
-        PickupController currentObj = other.GetComponent<PickupController>();
-        currentObj.gameObject.SetActive(false);
-        int weaponOrAmor = Random.Range(0, 2);
-        if (weaponOrAmor == 0)
-        {
-            inventory.Attack = currentObj.type;
-            Debug.Log("Attack " + inventory.Attack);
-        }
-        else
-        {
-            inventory.Defence = currentObj.type;
-            Debug.Log("Defence " + inventory.Defence);
+            Respawn spawn = closestSpawn.GetComponent<Respawn>();
+            spawn.startTimer();
+            PickupController currentObj = other.GetComponent<PickupController>();
+            currentObj.gameObject.SetActive(false);
+            int weaponOrAmor = Random.Range(0, 2);
+            if (weaponOrAmor == 0)
+            {
+                inventory.Attack = currentObj.type;
+                Debug.Log("Attack " + inventory.Attack);
+            }
+            else
+            {
+                inventory.Defence = currentObj.type;
+                Debug.Log("Defence " + inventory.Defence);
+            }
         }
     }
 }
