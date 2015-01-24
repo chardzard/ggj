@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ShootingController : MonoBehaviour {
+public class PlayerShootingController : MonoBehaviour {
+
+    GameObject bulletPrefab;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +20,6 @@ public class ShootingController : MonoBehaviour {
 
     void FireWeapon()
     {
- 
+        
     }
 }
