@@ -314,6 +314,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11434018, guid: ae64f4ba6e2a2954c89a6190ca0c5f37, type: 2}
+      propertyPath: m_Gunpoint
+      value: 
+      objectReference: {fileID: 490804507}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae64f4ba6e2a2954c89a6190ca0c5f37, type: 2}
   m_RootGameObject: {fileID: 2092868322}
@@ -334,7 +338,10 @@ GameObject:
   - 195: {fileID: 565216186}
   - 114: {fileID: 565216185}
   - 114: {fileID: 565216192}
+<<<<<<< HEAD
   - 114: {fileID: 565216193}
+=======
+>>>>>>> 02289391a0d5ee2c42ef8907a7a081fcde7b1591
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -438,7 +445,11 @@ Transform:
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 4
+=======
+  m_RootOrder: 3
+>>>>>>> 02289391a0d5ee2c42ef8907a7a081fcde7b1591
 --- !u!114 &565216192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -450,6 +461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d3b12d4949d59a4e8df01b87ad15c50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   health: 100
 --- !u!114 &565216193
 MonoBehaviour:
@@ -1577,6 +1589,9 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
+=======
+  health: 0
+>>>>>>> 02289391a0d5ee2c42ef8907a7a081fcde7b1591
 --- !u!1 &743665309
 GameObject:
   m_ObjectHideFlags: 0
@@ -2556,7 +2571,10 @@ GameObject:
   - 114: {fileID: 2092868325}
   - 114: {fileID: 2092868330}
   - 114: {fileID: 2092868329}
+<<<<<<< HEAD
   - 208: {fileID: 2092868331}
+=======
+>>>>>>> 02289391a0d5ee2c42ef8907a7a081fcde7b1591
   - 208: {fileID: 2092868324}
   m_Layer: 2
   m_Name: Player
@@ -2704,9 +2722,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84e7398d1b3913343b41c73068694239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   m_BulletPrefab: {fileID: 11484534, guid: b2f489b2d9e0d4f4aac9a9ef9b0cbd5d, type: 2}
   m_Gunpoint: {fileID: 490804507}
   m_CorsshairScreenLocation: {x: .5, y: .360000014, z: 0}
+=======
+  m_BulletPrefab: {fileID: 0}
+  m_Gunpoint: {fileID: 490804507}
+  m_CrosshairScreenLocation: {x: 0, y: 0, z: 0}
+>>>>>>> 02289391a0d5ee2c42ef8907a7a081fcde7b1591
 --- !u!114 &2092868330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2719,6 +2743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00b2914ed2607ab4198e49ef27624c67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!208 &2092868331
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -2731,6 +2756,8 @@ NavMeshObstacle:
   m_Height: 2
   m_MoveThreshold: 0
   m_Carve: 0
+=======
+>>>>>>> 02289391a0d5ee2c42ef8907a7a081fcde7b1591
 --- !u!1 &2134432375
 GameObject:
   m_ObjectHideFlags: 0
