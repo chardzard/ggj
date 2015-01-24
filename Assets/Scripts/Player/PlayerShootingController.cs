@@ -9,9 +9,14 @@ public class PlayerShootingController : MonoBehaviour {
 
     public Vector3 m_CorsshairScreenLocation;
 
+    private CharacterMotor characterMoter;
+
+    private Animator gunAnimator;
+
 	// Use this for initialization
 	void Start () {
-	
+        characterMoter = GetComponent<CharacterMotor>();
+        gunAnimator = GetComponentInChildren<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -19,7 +24,9 @@ public class PlayerShootingController : MonoBehaviour {
 	    if(Input.GetButtonDown("Fire1"))
         {
             FireWeapon();
+            gunAnimator.SetTrigger("Shooting");
         }
+        gunAnimator.SetBool("Jumping", characterMoter.IsJumping());
 	}
 
     void FireWeapon()

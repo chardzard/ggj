@@ -5,21 +5,13 @@ public class AIController : MonoBehaviour {
 
     GameObject agent;
     public int health;
-<<<<<<< HEAD
     private Inventory inventory;
-
-	void Start () {
-        inventory = GetComponent<Inventory>();
-	}
-	
-	void Update () {
-	    
-=======
 	GameObject player;
 	AbstractWeapon weapon;
 
 	void Start () {
 		player = GameObject.FindGameObjectWithTag("Player");
+        inventory = GetComponent<Inventory>();
 		//weapon = Instantiate(new BasicWeapon(), transform.position + new Vector3(10, 0, -5), transform.rotation) as AbstractWeapon;
 	}
 	
@@ -28,7 +20,6 @@ public class AIController : MonoBehaviour {
 	/*	if ((transform.position - player.transform.position).magnitude < weapon.SuggestedRange) {
 			weapon.Fire(gameObject);
 		}*/
->>>>>>> 02289391a0d5ee2c42ef8907a7a081fcde7b1591
 	}
 
     void OnTriggerEnter(Collider other)
