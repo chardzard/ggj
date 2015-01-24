@@ -1385,6 +1385,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11434018, guid: ae64f4ba6e2a2954c89a6190ca0c5f37, type: 2}
+      propertyPath: m_CrosshairScreenLocation.x
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11434018, guid: ae64f4ba6e2a2954c89a6190ca0c5f37, type: 2}
+      propertyPath: m_CrosshairScreenLocation.y
+      value: .360000014
+      objectReference: {fileID: 0}
+    - target: {fileID: 11434018, guid: ae64f4ba6e2a2954c89a6190ca0c5f37, type: 2}
+      propertyPath: m_CorsshairScreenLocation.x
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11434018, guid: ae64f4ba6e2a2954c89a6190ca0c5f37, type: 2}
+      propertyPath: m_CorsshairScreenLocation.y
+      value: .360000014
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae64f4ba6e2a2954c89a6190ca0c5f37, type: 2}
   m_RootGameObject: {fileID: 1148431598}
