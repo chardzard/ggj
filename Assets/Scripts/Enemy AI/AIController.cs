@@ -8,7 +8,6 @@ public class AIController : MonoBehaviour {
 	public int health;
 	public AbstractWeapon weaponPrefab;
 	private AbstractWeapon weapon;
-	public GameObject agent;
 	GameObject player;
 
 	void Start () {
@@ -36,7 +35,7 @@ public class AIController : MonoBehaviour {
             GameObject closestSpawn = null;
             foreach (GameObject obj in spawners)
             {
-                Vector3 currentPos = obj.transform.position - agent.transform.position;
+                Vector3 currentPos = obj.transform.position - transform.position;
                 if (currentPos.magnitude < closest.magnitude)
                 {
                     closest = currentPos;
