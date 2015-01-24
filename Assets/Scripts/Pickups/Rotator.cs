@@ -3,8 +3,14 @@ using System.Collections;
 
 public class Rotator : MonoBehaviour {
 
+    public float rotationRate;
+    Vector3 rotate;
+    void Start()
+    {
+        rotate = new Vector3(0, rotationRate * 45, 0);
+    }
 	void Update () 
     {
-        transform.Rotate(new Vector3(0, 115, 0) * Time.deltaTime);
+        transform.Rotate(rotate * Time.deltaTime);
 	}
 }
