@@ -351,7 +351,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cd31bbf9e2a46f42a50bca5b9c9a2f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1685766840}
 --- !u!195 &565216186
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1027,8 +1026,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1685766840}
   m_Layer: 0
-  m_Name: Target
-  m_TagString: Untagged
+  m_Name: OtherAI
+  m_TagString: OtherAI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1242,7 +1241,7 @@ GameObject:
   - 208: {fileID: 2092868324}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
