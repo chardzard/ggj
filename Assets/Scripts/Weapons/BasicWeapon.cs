@@ -20,7 +20,7 @@ public class BasicWeapon : AbstractWeapon {
 	public new bool Fire(GameObject shooter) {
 
 		base.Fire (shooter);
-		Bullet bullet = Instantiate(new BulletNone(), gunPoint.position, transform.rotation) as Bullet;
+		Bullet bullet = Instantiate(base.bulletPrefab, gunPoint.position, transform.rotation) as Bullet;
 		bullet.m_Shooter = shooter;
 		return true;
 	}

@@ -3,27 +3,27 @@ using System.Collections;
 
 public class AIController : MonoBehaviour {
 
-    GameObject agent;
-    public int health;
     private Inventory inventory;
+
+	public int health;
+	public AbstractWeapon weaponPrefab;
+	GameObject agent;
 	GameObject player;
-	AbstractWeapon weapon;
 
 	void Start () {
 		player = GameObject.FindGameObjectWithTag("Player");
         inventory = GetComponent<Inventory>();
-		//weapon = Instantiate(new BasicWeapon(), transform.position + new Vector3(10, 0, -5), transform.rotation) as AbstractWeapon;
+		weapon = Instantiate(weaponPrefab, transform.position + new Vector3(10, 0, -5), transform.rotation) as AbstractWeapon;
 	}
 	
 	void Update () {
 		//Test firing stuff - aim at player and shoot
-	/*	if ((transform.position - player.transform.position).magnitude < weapon.SuggestedRange) {
-			weapon.Fire(gameObject);
-		}*/
+		if ((transform.position - player.transform.position).magnitude < weapon.SuggestedRange) {
+			weapon.Fire (gameObject);
+		}
 	}
 
-    void OnTriggerEnter(Collider other)
-    {
+    void OnTriggerEnter(Collider other) {
         other.gameObject.SetActive(false);
         PickupController current = other.GetComponent<PickupController>();
         int weaponOrAmor = Random.Range(0, 2);
