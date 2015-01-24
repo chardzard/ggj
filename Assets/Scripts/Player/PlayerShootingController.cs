@@ -26,7 +26,11 @@ public class PlayerShootingController : MonoBehaviour {
             FireWeapon();
             gunAnimator.SetTrigger("Shooting");
         }
-        gunAnimator.SetBool("Jumping", characterMoter.IsJumping());
+        Vector3 velocity = characterMoter.movement.velocity;
+        velocity.y = 0f;
+        gunAnimator.SetBool("Grounded", characterMoter.IsGrounded());
+        gunAnimator.SetBool("Jumping", Input.GetKeyDown(KeyCode.Space));
+        gunAnimator.SetFloat("Velocity", velocity.magnitude);
 	}
 
     void FireWeapon()
