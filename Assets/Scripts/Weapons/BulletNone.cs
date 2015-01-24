@@ -6,7 +6,7 @@ public class BulletNone : Bullet {
     public float m_Force;
 
 	void Start () {
-        rigidbody.AddForce(transform.forward * m_Force);
+        rigidbody.velocity += transform.forward * m_Force;
         StartCoroutine(DestroyForTime());
 	}
 

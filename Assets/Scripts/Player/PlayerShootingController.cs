@@ -33,7 +33,7 @@ public class PlayerShootingController : MonoBehaviour {
         gunAnimator.SetFloat("Velocity", velocity.magnitude);
 	}
 
-    void FireWeapon()
+    bool FireWeapon()
     {
         Ray aimPoint = Camera.main.ViewportPointToRay(m_CorsshairScreenLocation);
         RaycastHit hit;
@@ -50,5 +50,7 @@ public class PlayerShootingController : MonoBehaviour {
         Quaternion bulletRotation = Quaternion.LookRotation(fireDirection);
         Bullet bulletInstance = Instantiate(m_BulletPrefab, m_Gunpoint.position, bulletRotation) as Bullet;
         bulletInstance.m_Shooter = gameObject;
+        bulletInstance.rigidbody.velocity += characterMoter.movement.velocity;
+        return true;
     }
 }

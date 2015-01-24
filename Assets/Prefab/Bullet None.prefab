@@ -13,7 +13,7 @@ GameObject:
   - 114: {fileID: 11484534}
   - 54: {fileID: 5487534}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: Bullet None
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Shooter: {fileID: 0}
-  m_Force: 1000
+  m_Force: 40
 --- !u!136 &13694856
 CapsuleCollider:
   m_ObjectHideFlags: 1
