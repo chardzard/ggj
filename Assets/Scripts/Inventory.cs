@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerInventory : MonoBehaviour {
+public class Inventory : MonoBehaviour {
 
     private PowerupTypes attack;
 
