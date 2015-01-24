@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &113122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 413122}
+  - 33: {fileID: 3313122}
+  - 23: {fileID: 2313122}
+  - 95: {fileID: 9513122}
+  m_Layer: 0
+  m_Name: Shield Visual
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &193384
 GameObject:
   m_ObjectHideFlags: 0
@@ -8,22 +26,18 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 493384}
-  - 33: {fileID: 3393386}
-  - 23: {fileID: 2393386}
-  - 114: {fileID: 11493384}
   - 114: {fileID: 11493386}
   - 135: {fileID: 13559254}
-  - 111: {fileID: 11100434}
   m_Layer: 0
   m_Name: Shield Pickup
-  m_TagString: Untagged
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &193386
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -38,6 +52,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &413122
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113122}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_Children:
+  - {fileID: 493386}
+  m_Father: {fileID: 493384}
+  m_RootOrder: 0
 --- !u!4 &493384
 Transform:
   m_ObjectHideFlags: 1
@@ -45,10 +72,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193384}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.27999997, y: 1.57000005, z: -.949999988}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 493386}
+  - {fileID: 413122}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &493386
@@ -59,16 +86,16 @@ Transform:
   m_GameObject: {fileID: 193386}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: -.707106829}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .0500000007, y: .0500000007, z: .0500000007}
+  m_LocalScale: {x: .0500000007, y: .0500000045, z: .0500000045}
   m_Children: []
-  m_Father: {fileID: 493384}
+  m_Father: {fileID: 413122}
   m_RootOrder: 0
---- !u!23 &2393386
+--- !u!23 &2313122
 Renderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 193384}
+  m_GameObject: {fileID: 113122}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -83,40 +110,28 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &3393386
+--- !u!33 &3313122
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 193384}
+  m_GameObject: {fileID: 113122}
   m_Mesh: {fileID: 4300000, guid: 75f6d8bc0ad3b6a4d9bfd736575e7c23, type: 3}
---- !u!111 &11100434
-Animation:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 193384}
-  m_Enabled: 1
+--- !u!95 &9513122
+Animator:
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 432ab57959020d440a68e9aa418ae7ed, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 432ab57959020d440a68e9aa418ae7ed, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!114 &11493384
-MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 193384}
+  m_GameObject: {fileID: 113122}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d26ea730d7292e45b1ee690df03d5e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationRate: 4
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d1f1c21daa6fdf94cb8bb507651730ca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11493386
 MonoBehaviour:
   m_ObjectHideFlags: 1

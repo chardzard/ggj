@@ -812,9 +812,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84e7398d1b3913343b41c73068694239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BulletPrefab: {fileID: 169512, guid: 38df06db23c4ea1459bd8110d65094a4, type: 2}
-  m_Gunpoint: {fileID: 0}
-  m_CorsshairScreenLocation: {x: 0, y: 0, z: 0}
+  m_BulletPrefab: {fileID: 11484534, guid: b2f489b2d9e0d4f4aac9a9ef9b0cbd5d, type: 2}
+  m_Gunpoint: {fileID: 459352}
+  m_CorsshairScreenLocation: {x: .5, y: .360000014, z: 0}
 --- !u!114 &11434792
 MonoBehaviour:
   m_ObjectHideFlags: 1
