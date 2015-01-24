@@ -12,7 +12,7 @@ public class Respawn : MonoBehaviour {
     {
         timerStarted = false;
         int type = Random.Range(0, pickup.Length);
-        Instantiate(pickup[type], transform.position + Vector3.up * .5f, Quaternion.identity);
+        Instantiate(pickup[type], transform.position + Vector3.up * .75f, Quaternion.identity);
     }
 
     void Update()
@@ -25,7 +25,7 @@ public class Respawn : MonoBehaviour {
                 timerStarted = false;
                 respawnTimer = reset;
                 int type = Random.Range(0, pickup.Length);
-                Instantiate(pickup[type],transform.position + Vector3.up * .5f,Quaternion.identity);
+                Instantiate(pickup[type],transform.position + Vector3.up * .75f,Quaternion.identity);
             }
         }
     }

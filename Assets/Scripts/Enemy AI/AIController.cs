@@ -46,7 +46,7 @@ public class AIController : MonoBehaviour {
             Respawn spawn = closestSpawn.GetComponent<Respawn>();
             spawn.startTimer();
             PickupController currentObj = other.GetComponent<PickupController>();
-            currentObj.gameObject.SetActive(false);
+            Destroy(currentObj.gameObject);
             int weaponOrAmor = Random.Range(0, 2);
             if (weaponOrAmor == 0)
             {
