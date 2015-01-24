@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerShootingController : MonoBehaviour {
 
-    public GameObject m_BulletPrefab;
+    public Bullet m_BulletPrefab;
 
     public Transform m_Gunpoint;
 
@@ -37,6 +37,7 @@ public class PlayerShootingController : MonoBehaviour {
             fireDirection = aimPoint.direction;
         }
         Quaternion bulletRotation = Quaternion.LookRotation(fireDirection);
-        GameObject bulletInstance = Instantiate(m_BulletPrefab, m_Gunpoint.position, bulletRotation) as GameObject;
+        Bullet bulletInstance = Instantiate(m_BulletPrefab, m_Gunpoint.position, bulletRotation) as Bullet;
+        bulletInstance.m_Shooter = gameObject;
     }
 }
