@@ -37,13 +37,18 @@ public class PlayerShootingController : MonoBehaviour {
     {
         Ray aimPoint = Camera.main.ViewportPointToRay(m_CorsshairScreenLocation);
         RaycastHit hit;
-        Vector3 fireDirection;
+        Vector3 fireDirection = Vector3.zero;
+        bool directionSet = false;
         if (Physics.Raycast(aimPoint, out hit))
         {
             Debug.Log(hit.point);
+            if (hit.distance >= 1f)
+            {
+                directionSet = true;
+            }
             fireDirection = hit.point - m_Gunpoint.position;
         }
-        else
+        if (!directionSet)
         {
             fireDirection = aimPoint.direction;
         }
