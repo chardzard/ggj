@@ -53,9 +53,9 @@ public class AIController : MonoBehaviour {
         }
         
         if(shootTarget != null)
-            shootTargeting();
-        if(moveTarget != null)
-            agent.SetDestination(moveTarget.transform.position);
+            shootAtTarget();
+        if (moveTarget != null)
+			moveToTarget ();
 
         if(health <= 0)
         {
@@ -102,32 +102,24 @@ public class AIController : MonoBehaviour {
         return closestObj;
     }
 
-    void shootTargeting()
-    {
+    void shootAtTarget() {
         Vector3 directionalDistance = shootTarget.transform.position - transform.position;
-        if (directionalDistance.magnitude < weapon.SuggestedRange)
-        {
+        if (directionalDistance.magnitude < weapon.SuggestedRange) {
             RaycastHit hitInfo;
-            Debug.DrawRay(transform.position, directionalDistance, Color.red);
             bool castVal = Physics.Raycast(transform.position, directionalDistance, out hitInfo);
             //If we can see target, face to it
-            if (hitInfo.transform != null && hitInfo.transform.gameObject == shootTarget)
-            {
+            if (hitInfo.transform != null && hitInfo.transform.gameObject == shootTarget) {
                 Vector3 direction = directionalDistance.normalized;
-                Debug.DrawRay(transform.position, direction, Color.blue);
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), Time.deltaTime * actorRotationSpeed);
-                //Quaternion rotation = Quaternion.LookRotation(direction);
-                //transform.rotation = rotation;
 
-                if (weapon.CurrentAmmo > 0 && castVal)
-                {
+                if (weapon.CurrentAmmo > 0 && castVal && transform.rotation == Quaternion.LookRotation(direction)) {
                     weapon.Fire(gameObject, transform.rotation, rigidbody.velocity);
-                }
-                else if (weapon.CurrentAmmo <= 0)
-                {
-                    //Swap back to default ammo
                 }
             }
         }
     }
+	void moveToTarget() {
+		
+		agent.SetDestination (moveTarget.transform.position);
+	}
 }
