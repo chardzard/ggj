@@ -139,7 +139,7 @@ public class AIController : MonoBehaviour {
     {
         if (other.tag == "Bullet")
         {
-            Bullet hit = other.GetComponent<Bullet>();
+            Bullet hit = other.transform.GetComponentInParent<Bullet>();
             GameObject shooter = hit.m_Shooter;
             float temp = 0;
             if (aggroList.TryGetValue(shooter,out temp))
@@ -172,6 +172,15 @@ public class AIController : MonoBehaviour {
         else
         {
             shootTarget = closestObj(actorList);
+        }
+    }
+
+    void addAggro(GameObject shooter, float damage)
+    {
+        float temp = 0;
+        if (aggroList.TryGetValue(shooter, out temp))
+        {
+            aggroList[shooter] += (aggroLevel * damage);
         }
     }
 }
