@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BasicWeapon : AbstractWeapon {
+public class WeaponNone : AbstractWeapon {
 
     private float lastShotTime;
 
