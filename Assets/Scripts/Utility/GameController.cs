@@ -12,7 +12,8 @@ public class GameController : MonoBehaviour {
     private int[] killCount;
     private GameObject[] actorArray;
     private float startTime;
-    
+  
+
     public void actorKill(GameObject killer)
     {
         for (int i = 0; i < actorArray.Length; i++)
@@ -37,6 +38,7 @@ private void EndGame()
 
 	// Use this for initialization
 	void Start () {
+
         endTime *= 60f;
         endTime += Time.time; 
 	}
