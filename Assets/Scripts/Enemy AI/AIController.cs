@@ -11,12 +11,14 @@ public class AIController : MonoBehaviour {
 	public Vector3 weaponOffsetPosition;
 	public Quaternion weaponOffsetRotation;
     public float actorRotationSpeed;
-    public int aggroLevel;
+    public float aggroLevel;
+    public float aggroDecrease;
 
     AbstractWeapon weapon;
     NavMeshAgent agent;
     List<GameObject> pickupList;
     List<GameObject> actorList;
+    Dictionary<GameObject, float> aggroList;
     GameObject player;
     GameObject moveTarget;
     GameObject shootTarget;
@@ -26,6 +28,7 @@ public class AIController : MonoBehaviour {
 		weapon = Instantiate(weaponPrefabs[0], transform.position + weaponOffsetPosition, transform.rotation) as AbstractWeapon;
 		weapon.transform.SetParent (transform, false);
         agent = GetComponent<NavMeshAgent>();
+        aggroList = new Dictionary<GameObject, float>();
 	}
 	
 	void Update () {
@@ -36,21 +39,28 @@ public class AIController : MonoBehaviour {
         GameObject closestPickupObj = null;
         GameObject closestActor = null;
 
+        foreach(KeyValuePair<GameObject, float> entry in aggroList) 
+        {
+            if (aggroList[entry.Key] > 0)
+                aggroList[entry.Key] -= aggroDecrease * Time.deltaTime;
+        }
+        updateShootingTarget();
+
         if (pickupList.Count > 0)
             closestPickupObj = closestObj(pickupList);
-        if (actorList.Count > 0)
-            closestActor = closestObj(actorList);
+        /*if (actorList.Count > 0)
+            closestActor = closestObj(actorList);*/
 
         if (closestPickupObj != null)
         {
             moveTarget = closestPickupObj;
             Debug.Log("going to pickup");
         }
-        if (closestActor != null)
+        /*if (aggroList.Count == 0 && closestActor != null)
         {
             shootTarget = closestActor;
             Debug.Log("going to enemy");
-        }
+        }*/
         
         if(shootTarget != null)
             shootAtTarget();
@@ -122,4 +132,44 @@ public class AIController : MonoBehaviour {
 		
 		agent.SetDestination (moveTarget.transform.position);
 	}
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Bullet")
+        {
+            Bullet hit = other.GetComponent<Bullet>();
+            GameObject shooter = hit.m_Shooter;
+            float temp = 0;
+            if (aggroList.TryGetValue(shooter,out temp))
+            {
+                aggroList[shooter] += aggroLevel;
+            }
+            else
+            {
+                aggroList.Add(shooter, aggroLevel);
+            }
+        }
+    }
+
+    void updateShootingTarget()
+    {
+        GameObject highestAggro = null;
+        float highestValue = 0;
+        foreach (KeyValuePair<GameObject, float> entry in aggroList)
+        {
+            if (entry.Value > highestValue)
+            {
+                highestValue = entry.Value;
+                highestAggro = entry.Key;
+            }
+        }
+        if (highestAggro == null)
+        {
+            shootTarget = highestAggro;
+        }
+        else
+        {
+            shootTarget = closestObj(actorList);
+        }
+    }
 }
