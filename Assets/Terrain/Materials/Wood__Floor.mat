@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: sketch_stone
+  m_Name: Wood__Floor
   m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
@@ -17,7 +17,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: b9b4a42e2e6b6a345841f51d86f98691, type: 3}
+          m_Texture: {fileID: 2800000, guid: 370083307bb489646bf78c1884fcfc90, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats: {}
@@ -25,4 +25,4 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .56078434, g: .56078434, b: .56078434, a: 1}
+        second: {r: .607843161, g: .411764711, b: .239215687, a: 1}
