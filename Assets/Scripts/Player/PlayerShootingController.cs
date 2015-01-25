@@ -22,6 +22,7 @@ public class PlayerShootingController : MonoBehaviour {
         weapon.transform.localScale = weapon.transform.localScale;
         weapon.transform.parent = Camera.main.transform;
         m_Gunpoint = weapon.transform.FindChild("Gunpoint");
+        gunAnimator = weapon.GetComponent<Animator>();
     }
 
 	// Use this for initialization
@@ -34,15 +35,19 @@ public class PlayerShootingController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if(Input.GetButtonDown("Fire1"))
+	    if(Input.GetButton("Fire1"))
         {
-            FireWeapon();
-            gunAnimator.SetTrigger("Shooting");
+            gunAnimator.SetBool("Shooting", FireWeapon());
         }
-        Vector3 velocity = characterMoter.movement.velocity;
-        velocity.y = 0f;
+        else
+        {
+            gunAnimator.SetBool("Shooting", false);
+        }
         gunAnimator.SetBool("Grounded", characterMoter.IsGrounded());
         gunAnimator.SetBool("Jumping", Input.GetKeyDown(KeyCode.Space));
+
+        Vector3 velocity = characterMoter.movement.velocity;
+        velocity.y = 0f;
         gunAnimator.SetFloat("Velocity", velocity.magnitude);
 	}
 

@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class BasicWeapon : AbstractWeapon {
-	
+
+    private float lastShotTime;
+
 	// Use this for initialization
 	void Start () {
 		base.maxAmmo = 30;
@@ -18,12 +20,20 @@ public class BasicWeapon : AbstractWeapon {
 	}
 	
 	public override bool Fire(GameObject shooter, Quaternion rotation, Vector3 velocity) {
-		Debug.Log ("ammo is " + currentAmmo);
-		currentAmmo--;
-        Bullet bullet = Instantiate(bulletPrefab, gunPoint.position, rotation) as Bullet;
-		bullet.m_Shooter = shooter;
-        bullet.rigidbody.velocity += velocity;
-		return true;
+        if (Time.time - lastShotTime > fireRate)
+        {
+            Debug.Log("ammo is " + currentAmmo);
+            currentAmmo--;
+            Bullet bullet = Instantiate(bulletPrefab, gunPoint.position, rotation) as Bullet;
+            bullet.m_Shooter = shooter;
+            bullet.rigidbody.velocity += velocity;
+            lastShotTime = Time.time;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
 	}
 
     public override int CurrentAmmo
