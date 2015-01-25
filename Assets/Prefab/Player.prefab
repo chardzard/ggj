@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Gunpoint: {fileID: 0}
   m_CorsshairScreenLocation: {x: .5, y: .360000014, z: 0}
   weaponTransform: {fileID: 487426, guid: 2d9060f59f318e04fa544c7bd84a7f26, type: 2}
-  weapon: {fileID: 11473772, guid: 85029c0a5e0515a4cafb636e49a06958, type: 2}
+  startingWeapon: {fileID: 11479894, guid: 1b1b7cf33df029b46a7d4f06968951a2, type: 2}
 --- !u!114 &11434792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -407,6 +407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 0}
   maxHealth: 100
+  currentHelth: 0
 --- !u!124 &12434792
 Behaviour:
   m_ObjectHideFlags: 1

@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
+[Serializable]
 public abstract class AbstractWeapon : MonoBehaviour {
 	public Bullet bulletPrefab;
 	protected int maxAmmo;

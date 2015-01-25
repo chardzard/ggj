@@ -5,27 +5,54 @@ public class PickupController : MonoBehaviour {
 
     public PowerupTypes type;
 
+    public AbstractWeapon weaponPrefabs;
+
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Enemy")
+        bool used = false;
+        if (type == PowerupTypes.shield)
         {
-            AIController enemy = other.GetComponent<AIController>();
-            int weaponOrAmor = Random.Range(0, 2);
-            if (weaponOrAmor == 0)
+            if (other.gameObject.tag == "Enemy")
             {
-                enemy.setInventoryWeapon(type);
+                AIController enemy = other.GetComponent<AIController>();
+                enemy.health = 100;
+                used = true;
             }
-            else
+            else if (other.gameObject.tag == "Player")
             {
-                enemy.setInventoryArmor(type);
+                PlayerHealthController player = other.GetComponent<PlayerHealthController>();
+                player.Helth = player.maxHealth;
+                used = true;
             }
         }
-        else if (other.gameObject.tag == "PlayerController")
+        else
         {
-            //TODO functionality for players picking up powerup
+            if (other.gameObject.tag == "Enemy")
+            {
+                AIController enemy = other.GetComponent<AIController>();
+                int weaponOrAmor = Random.Range(0, 2);
+                if (weaponOrAmor == 0)
+                {
+                    enemy.setInventoryWeapon(type);
+                }
+                else
+                {
+                    enemy.setInventoryArmor(type);
+                }
+                used = true;
+            }
+            else if (other.gameObject.tag == "Player")
+            {
+                PlayerShootingController player = other.GetComponent<PlayerShootingController>();
+                player.WeaponUpdate(weaponPrefabs);
+                used = true;
+            }
         }
-        spawnTimer();
-        Destroy(gameObject);
+        if (used)
+        {
+            spawnTimer();
+            Destroy(gameObject);
+        }
     }
 
     void spawnTimer()
