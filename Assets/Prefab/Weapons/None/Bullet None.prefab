@@ -14,7 +14,7 @@ GameObject:
   - 54: {fileID: 5487534}
   m_Layer: 0
   m_Name: Bullet None
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +30,7 @@ GameObject:
   - 136: {fileID: 13694856}
   m_Layer: 0
   m_Name: Colider
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
