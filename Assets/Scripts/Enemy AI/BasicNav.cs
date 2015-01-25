@@ -30,26 +30,32 @@ public class BasicNav : MonoBehaviour {
         if (closestPickupObj != null)
         {
             agent.SetDestination(closestPickupObj.transform.position);
+            Debug.Log("going to pickup");
         }
         else if(closestAI != null)
         {
             agent.SetDestination(closestAI.transform.position);
+            Debug.Log("going to enemy");
         }
         else
         {
             agent.SetDestination(player.transform.position);
+            Debug.Log("going to player");
         }
 	}
     GameObject closestObj(GameObject[] objects)
     {
-        Vector3 closest = objects[0].transform.position;
-        GameObject closestObj = objects[0];
+        Vector3 closest = new Vector3(999999, 999999, 999999);
+        GameObject closestObj = null;
         foreach(GameObject obj in objects){
-            Vector3 current = obj.transform.position - agent.transform.position;
-            if (current.magnitude < closest.magnitude)
+            if (obj != gameObject)
             {
-                closest = current;
-                closestObj = obj;
+                Vector3 current = obj.transform.position - transform.position;
+                if (current.magnitude < closest.magnitude)
+                {
+                    closest = current;
+                    closestObj = obj;
+                }
             }
         }
         return closestObj;
