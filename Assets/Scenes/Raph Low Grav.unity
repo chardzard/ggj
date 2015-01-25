@@ -446,6 +446,11 @@ Prefab:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 446923094}
+    - target: {fileID: 11434018, guid: ae64f4ba6e2a2954c89a6190ca0c5f37, type: 2}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 11482330, guid: 869f870ffdec92947bc48675b278ba49,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae64f4ba6e2a2954c89a6190ca0c5f37, type: 2}
   m_RootGameObject: {fileID: 1148431598}
@@ -900,7 +905,7 @@ MonoBehaviour:
   m_Gunpoint: {fileID: 0}
   m_CorsshairScreenLocation: {x: .5, y: .360000014, z: 0}
   weaponTransform: {fileID: 487426, guid: 2d9060f59f318e04fa544c7bd84a7f26, type: 2}
-  weapon: {fileID: 11473772, guid: 85029c0a5e0515a4cafb636e49a06958, type: 2}
+  weapon: {fileID: 11482330, guid: 869f870ffdec92947bc48675b278ba49, type: 2}
 --- !u!114 &1148431605
 MonoBehaviour:
   m_ObjectHideFlags: 0
