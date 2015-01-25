@@ -8,17 +8,18 @@ public class AIController : MonoBehaviour {
 
 	public int health;
 	public AbstractWeapon[] weaponPrefabs;
-	private AbstractWeapon weapon;
 	public Vector3 weaponOffsetPosition;
 	public Quaternion weaponOffsetRotation;
+    public float actorRotationSpeed;
+    public int aggroLevel;
+
+    AbstractWeapon weapon;
     NavMeshAgent agent;
     List<GameObject> pickupList;
     List<GameObject> actorList;
     GameObject player;
     GameObject moveTarget;
     GameObject shootTarget;
-
-	public float actorRotationSpeed;
 
 	void Start () {
         inventory = GetComponent<Inventory>();
