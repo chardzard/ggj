@@ -12,18 +12,18 @@ public class BasicNav : MonoBehaviour {
     {
         agent = GetComponent<NavMeshAgent>();
         pickups = GameObject.FindGameObjectsWithTag("Pickup");
-        enemies = GameObject.FindGameObjectsWithTag("OtherAI");
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
         player = GameObject.FindGameObjectWithTag("Player");
 	}
 
 	void Update () 
     {
         pickups = GameObject.FindGameObjectsWithTag("Pickup");
-        enemies = GameObject.FindGameObjectsWithTag("OtherAI");
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
         player = GameObject.FindGameObjectWithTag("Player");
         GameObject closestPickupObj = null;
         GameObject closestAI = null;
-        if(pickups.Length > 0)
+        if (pickups.Length > 0)
             closestPickupObj = closestObj(pickups);
         if(enemies.Length > 0)
             closestAI = closestObj(enemies);
@@ -42,8 +42,8 @@ public class BasicNav : MonoBehaviour {
 	}
     GameObject closestObj(GameObject[] objects)
     {
-        Vector3 closest = new Vector3(99999,99999,99999);
-        GameObject closestObj = null;
+        Vector3 closest = objects[0].transform.position;
+        GameObject closestObj = objects[0];
         foreach(GameObject obj in objects){
             Vector3 current = obj.transform.position - agent.transform.position;
             if (current.magnitude < closest.magnitude)

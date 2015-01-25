@@ -84,7 +84,7 @@ GameObject:
   - 4: {fileID: 92519410}
   - 33: {fileID: 92519412}
   - 23: {fileID: 92519411}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Pump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   - 4: {fileID: 186585624}
   - 33: {fileID: 186585626}
   - 23: {fileID: 186585625}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Rifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,7 +320,7 @@ GameObject:
   - 4: {fileID: 348422671}
   - 33: {fileID: 348422673}
   - 23: {fileID: 348422672}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +376,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 490804507}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Gunpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +432,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 434796, guid: ae64f4ba6e2a2954c89a6190ca0c5f37, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae64f4ba6e2a2954c89a6190ca0c5f37, type: 2}
@@ -512,7 +512,7 @@ GameObject:
   - 4: {fileID: 764812970}
   - 33: {fileID: 764812972}
   - 23: {fileID: 764812971}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: BulletCasing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -644,7 +644,7 @@ GameObject:
   - 114: {fileID: 1223528265}
   - 81: {fileID: 1223528264}
   - 108: {fileID: 1223528263}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -794,7 +794,7 @@ GameObject:
   - 114: {fileID: 1243081579}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -824,8 +824,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  weaponPrefab: {fileID: 11479894, guid: 1b1b7cf33df029b46a7d4f06968951a2, type: 2}
-  agent: {fileID: 1243081578}
+  weaponPrefabs:
+  - {fileID: 11479894, guid: 1b1b7cf33df029b46a7d4f06968951a2, type: 2}
+  weaponOffsetPosition: {x: 0, y: 1, z: 0}
+  weaponOffsetRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1243081581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -939,7 +941,7 @@ GameObject:
   - 4: {fileID: 1298514014}
   - 33: {fileID: 1298514016}
   - 23: {fileID: 1298514015}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: BulletCasing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1066,7 +1068,7 @@ GameObject:
   - 4: {fileID: 1533982287}
   - 33: {fileID: 1533982289}
   - 23: {fileID: 1533982288}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Magazine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1124,7 +1126,7 @@ GameObject:
   - 4: {fileID: 1656548805}
   - 33: {fileID: 1656548807}
   - 23: {fileID: 1656548806}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Bullet2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1243,7 +1245,7 @@ GameObject:
   - 4: {fileID: 1685766840}
   m_Layer: 0
   m_Name: OtherAI
-  m_TagString: OtherAI
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1270,7 +1272,7 @@ GameObject:
   - 4: {fileID: 1981341669}
   - 33: {fileID: 1981341671}
   - 23: {fileID: 1981341670}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: MovingParts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1410,7 +1412,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2009124836}
   - 95: {fileID: 2009124837}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: CQAssaultRifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1470,8 +1472,9 @@ GameObject:
   - 114: {fileID: 2092868330}
   - 114: {fileID: 2092868329}
   - 208: {fileID: 2092868331}
+  - 82: {fileID: 2092868332}
   - 208: {fileID: 2092868324}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1644,6 +1647,65 @@ NavMeshObstacle:
   m_Height: 2
   m_MoveThreshold: 0
   m_Carve: 0
+--- !u!82 &2092868332
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8241496, guid: ae64f4ba6e2a2954c89a6190ca0c5f37,
+    type: 2}
+  m_PrefabInternal: {fileID: 509091191}
+  m_GameObject: {fileID: 2092868322}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: ccab78ff8ddd83a409e54adf40e25485, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &2121943068
 Prefab:
   m_ObjectHideFlags: 0
@@ -1683,6 +1745,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 107274, guid: 0caefe782f6cf0641bd49cf08ca3fc1d, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0caefe782f6cf0641bd49cf08ca3fc1d, type: 2}
   m_RootGameObject: {fileID: 1243081578}
@@ -1698,7 +1764,7 @@ GameObject:
   - 4: {fileID: 2134432376}
   - 33: {fileID: 2134432378}
   - 23: {fileID: 2134432377}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1756,7 +1822,7 @@ GameObject:
   - 4: {fileID: 2143470701}
   - 33: {fileID: 2143470703}
   - 23: {fileID: 2143470702}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
