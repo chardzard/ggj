@@ -77,7 +77,7 @@ GameObject:
   - 95: {fileID: 9585110}
   - 114: {fileID: 11479894}
   m_Layer: 0
-  m_Name: CQAssaultRifle
+  m_Name: Basic Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

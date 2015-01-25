@@ -31,7 +31,7 @@ public class AIController : MonoBehaviour {
 
 
 			if(weapon.CurrentAmmo > 0) {
-				weapon.Fire (gameObject);
+				weapon.Fire (gameObject, transform.rotation, rigidbody.velocity);
 			} else if (weapon.CurrentAmmo <= 0) {
 				//Swap back to default ammo
 			}

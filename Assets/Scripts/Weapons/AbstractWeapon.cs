@@ -22,7 +22,7 @@ public abstract class AbstractWeapon : MonoBehaviour {
 		get { return maxAmmo; }
 	}
 	
-	public int CurrentAmmo {
+	public virtual int CurrentAmmo {
 		get { return currentAmmo; }
 	}
 	
@@ -38,6 +38,6 @@ public abstract class AbstractWeapon : MonoBehaviour {
 	public Transform GunPoint {
 		get { return gunPoint; }
 	}
-	
-	public abstract bool Fire (GameObject shooter);
+
+    public abstract bool Fire(GameObject shooter, Quaternion rotation, Vector3 velocity);
 }

@@ -17,11 +17,17 @@ public class BasicWeapon : AbstractWeapon {
 		
 	}
 	
-	public override bool Fire(GameObject shooter) {
-		print ("ammo is " + currentAmmo);
+	public override bool Fire(GameObject shooter, Quaternion rotation, Vector3 velocity) {
+		Debug.Log ("ammo is " + currentAmmo);
 		currentAmmo--;
-		Bullet bullet = Instantiate(base.bulletPrefab, gunPoint.position, transform.rotation) as Bullet;
+        Bullet bullet = Instantiate(bulletPrefab, gunPoint.position, rotation) as Bullet;
 		bullet.m_Shooter = shooter;
+        bullet.rigidbody.velocity += velocity;
 		return true;
 	}
+
+    public override int CurrentAmmo
+    {
+        get { return 42; }
+    }
 }

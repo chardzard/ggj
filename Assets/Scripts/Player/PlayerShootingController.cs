@@ -1,22 +1,35 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class PlayerShootingController : MonoBehaviour {
-
-    public Bullet m_BulletPrefab;
 
     public Transform m_Gunpoint;
 
     public Vector3 m_CorsshairScreenLocation;
 
+    public Transform weaponTransform;
+
+    public AbstractWeapon weapon;
+
     private CharacterMotor characterMoter;
 
     private Animator gunAnimator;
 
+    public void WeaponUpdate(AbstractWeapon weaponPrefab)
+    {
+        weapon = Instantiate(weaponPrefab, weaponTransform.position, weaponTransform.rotation) as AbstractWeapon;
+        weapon.transform.localScale = weapon.transform.localScale;
+        weapon.transform.parent = Camera.main.transform;
+        m_Gunpoint = weapon.transform.FindChild("Gunpoint");
+    }
+
 	// Use this for initialization
 	void Start () {
+        
         characterMoter = GetComponent<CharacterMotor>();
         gunAnimator = GetComponentInChildren<Animator>();
+        WeaponUpdate(weapon);
 	}
 	
 	// Update is called once per frame
@@ -53,9 +66,6 @@ public class PlayerShootingController : MonoBehaviour {
             fireDirection = aimPoint.direction;
         }
         Quaternion bulletRotation = Quaternion.LookRotation(fireDirection);
-        Bullet bulletInstance = Instantiate(m_BulletPrefab, m_Gunpoint.position, bulletRotation) as Bullet;
-        bulletInstance.m_Shooter = gameObject;
-        bulletInstance.rigidbody.velocity += characterMoter.movement.velocity;
-        return true;
+        return weapon.Fire(gameObject, bulletRotation, characterMoter.movement.velocity);
     }
 }
