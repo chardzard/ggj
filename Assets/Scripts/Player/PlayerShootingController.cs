@@ -10,7 +10,9 @@ public class PlayerShootingController : MonoBehaviour {
 
     public Transform weaponTransform;
 
-    public AbstractWeapon weapon;
+    public AbstractWeapon startingWeapon;
+
+    private AbstractWeapon weapon;
 
     private CharacterMotor characterMoter;
 
@@ -18,6 +20,8 @@ public class PlayerShootingController : MonoBehaviour {
 
     public void WeaponUpdate(AbstractWeapon weaponPrefab)
     {
+        if (weapon != null)
+            Destroy(weapon);
         weapon = Instantiate(weaponPrefab, weaponTransform.position, weaponTransform.rotation) as AbstractWeapon;
         weapon.transform.localScale = weapon.transform.localScale;
         weapon.transform.parent = Camera.main.transform;
@@ -29,7 +33,7 @@ public class PlayerShootingController : MonoBehaviour {
 	void Start () {
         characterMoter = GetComponent<CharacterMotor>();
         gunAnimator = GetComponentInChildren<Animator>();
-        WeaponUpdate(weapon);
+        WeaponUpdate(startingWeapon);
 	}
 	
 	// Update is called once per frame

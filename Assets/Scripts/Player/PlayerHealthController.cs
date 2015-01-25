@@ -20,7 +20,7 @@ public class PlayerHealthController : MonoBehaviour {
         }
     }
 
-    private int currentHelth;
+    public int currentHelth;
 
 	// Use this for initialization
 	void Start () {

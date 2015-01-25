@@ -9,6 +9,9 @@ public class GameController : MonoBehaviour {
     public float endTime;  // Minutes
     public int endKills; // Num kills
 
+    [SerializeField]
+    public AbstractWeapon[] weapons;
+
     private int[] killCount;
     private GameObject[] actorArray;
     private float startTime;
