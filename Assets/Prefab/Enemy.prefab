@@ -116,6 +116,7 @@ MonoBehaviour:
   - {fileID: 11479894, guid: 1b1b7cf33df029b46a7d4f06968951a2, type: 2}
   weaponOffsetPosition: {x: 0, y: 1, z: 0}
   weaponOffsetRotation: {x: 0, y: 0, z: 0, w: 0}
+  actorRotationSpeed: 10
 --- !u!114 &11407274
 MonoBehaviour:
   m_ObjectHideFlags: 1
