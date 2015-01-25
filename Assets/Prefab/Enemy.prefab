@@ -15,7 +15,6 @@ GameObject:
   - 195: {fileID: 19507274}
   - 114: {fileID: 11407272}
   - 114: {fileID: 11407274}
-  - 114: {fileID: 11407270}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -89,17 +88,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11407270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 107274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cd31bbf9e2a46f42a50bca5b9c9a2f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11407272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,6 +105,8 @@ MonoBehaviour:
   weaponOffsetPosition: {x: 0, y: 1, z: 0}
   weaponOffsetRotation: {x: 0, y: 0, z: 0, w: 0}
   actorRotationSpeed: 2
+  aggroLevel: 0
+  aggroDecrease: 0
 --- !u!114 &11407274
 MonoBehaviour:
   m_ObjectHideFlags: 1
