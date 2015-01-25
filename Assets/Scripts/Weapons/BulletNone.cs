@@ -18,7 +18,8 @@ public class BulletNone : Bullet {
         }
         if(other.tag == "Player")
         {
-
+            PlayerHealthController hit = other.GetComponent<PlayerHealthController>();
+            hit.Helth -= 5;
         }
         else if(other.tag == "Enemy")
         {

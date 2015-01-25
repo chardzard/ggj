@@ -27,7 +27,6 @@ public class PlayerShootingController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        
         characterMoter = GetComponent<CharacterMotor>();
         gunAnimator = GetComponentInChildren<Animator>();
         WeaponUpdate(weapon);
