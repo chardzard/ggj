@@ -18,6 +18,8 @@ public class BasicNav : MonoBehaviour {
 
 	void Update () 
     {
+		agent.updateRotation = false;
+
         pickups = GameObject.FindGameObjectsWithTag("Pickup");
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         player = GameObject.FindGameObjectWithTag("Player");
