@@ -61,7 +61,7 @@ public class AIController : MonoBehaviour {
             shootTarget = closestActor;
             Debug.Log("going to enemy");
         }*/
-        
+        Debug.Log(shootTarget);
         if(shootTarget != null)
             shootAtTarget();
         if (moveTarget != null)
@@ -117,10 +117,12 @@ public class AIController : MonoBehaviour {
         if (directionalDistance.magnitude < weapon.SuggestedRange) {
             RaycastHit hitInfo;
             bool castVal = Physics.Raycast(transform.position, directionalDistance, out hitInfo);
+            Debug.DrawRay(transform.position, directionalDistance);
             //If we can see target, face to it
             if (hitInfo.transform != null && hitInfo.transform.gameObject == shootTarget) {
                 Vector3 direction = directionalDistance.normalized;
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), Time.deltaTime * actorRotationSpeed);
+                Debug.Log("HI");
 
                 if (weapon.CurrentAmmo > 0 && castVal && transform.rotation == Quaternion.LookRotation(direction)) {
                     weapon.Fire(gameObject, transform.rotation, rigidbody.velocity);
@@ -163,7 +165,7 @@ public class AIController : MonoBehaviour {
                 highestAggro = entry.Key;
             }
         }
-        if (highestAggro == null)
+        if (highestAggro != null)
         {
             shootTarget = highestAggro;
         }

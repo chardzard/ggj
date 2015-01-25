@@ -7,6 +7,8 @@ public class PlayerHealthController : MonoBehaviour {
     public Slider healthSlider;
     public int maxHealth;
 
+    private GameController gameController;
+
     public int Helth
     {
         get
@@ -35,6 +37,10 @@ public class PlayerHealthController : MonoBehaviour {
         if(currentHelth <= 0)
         {
             KillPlayer();
+        }
+        if(currentHelth < 50)
+        {
+            gameController.updateSong(true);
         }
     }
 

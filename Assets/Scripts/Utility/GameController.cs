@@ -9,13 +9,14 @@ public class GameController : MonoBehaviour {
     public float endTime;  // Minutes
     public int endKills; // Num kills
 
-    [SerializeField]
-    public AbstractWeapon[] weapons;
+    public AudioClip normalMusic;
+    public AudioClip lowMusic;
 
     private int[] killCount;
     private GameObject[] actorArray;
     private float startTime;
-  
+
+    private bool currentSong;
 
     public void actorKill(GameObject killer)
     {
@@ -63,5 +64,21 @@ private void EndGame()
     {
         int seconds = (int) secondsRemaining;
         timeRemainingText.text = seconds/60 + ":" + seconds%60;
+    }
+
+    internal void updateSong(bool p)
+    {
+        if(currentSong != p)
+        {
+            if(p)
+            {
+                audio.clip = lowMusic;
+            }
+            else
+            {
+                audio.clip = normalMusic;
+            }
+        }
+        audio.Play();
     }
 }
