@@ -163,7 +163,7 @@ public class AIController : MonoBehaviour {
                 highestAggro = entry.Key;
             }
         }
-        if (highestAggro == null)
+        if (highestAggro != null)
         {
             shootTarget = highestAggro;
         }
