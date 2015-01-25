@@ -32,6 +32,7 @@ ModelImporter:
     100052: Right_Foot
     100054: Right_Shoulder
     100056: Right_Thumb
+    100058: Trigger
     400000: Body
     400002: //RootNode
     400004: Head
@@ -61,6 +62,7 @@ ModelImporter:
     400052: Right_Foot
     400054: Right_Shoulder
     400056: Right_Thumb
+    400058: Trigger
     2300000: Body
     2300002: Head_MeshPart0
     2300004: Head_MeshPart1
@@ -88,6 +90,7 @@ ModelImporter:
     2300048: Right_Foot
     2300050: Right_Shoulder
     2300052: Right_Thumb
+    2300054: Trigger
     3300000: Body
     3300002: Head_MeshPart0
     3300004: Head_MeshPart1
@@ -115,33 +118,35 @@ ModelImporter:
     3300048: Right_Foot
     3300050: Right_Shoulder
     3300052: Right_Thumb
-    4300000: Right_Thumb
-    4300002: Head_MeshPart0
-    4300004: Head_MeshPart1
-    4300006: Head_MeshPart2
-    4300008: Head_MeshPart3
-    4300010: Head_MeshPart4
-    4300012: Head_MeshPart5
-    4300014: Head_MeshPart6
-    4300016: Head_MeshPart7
-    4300018: Head_MeshPart8
-    4300020: Head_MeshPart9
-    4300022: Head_MeshPart10
-    4300024: Head_MeshPart11
-    4300026: Head_MeshPart12
-    4300028: Head_MeshPart13
-    4300030: Head_MeshPart14
-    4300032: Head_MeshPart15
-    4300034: Head_MeshPart16
-    4300036: Head_MeshPart17
-    4300038: Head_MeshPart18
-    4300040: Head_MeshPart19
-    4300042: Left_Foot
-    4300044: Left_Shoulder
-    4300046: Body
-    4300048: Right_Shoulder
-    4300050: Left_Thumb
-    4300052: Right_Foot
+    3300054: Trigger
+    4300000: Trigger
+    4300002: Right_Thumb
+    4300004: Head_MeshPart0
+    4300006: Head_MeshPart1
+    4300008: Head_MeshPart2
+    4300010: Head_MeshPart3
+    4300012: Head_MeshPart4
+    4300014: Head_MeshPart5
+    4300016: Head_MeshPart6
+    4300018: Head_MeshPart7
+    4300020: Head_MeshPart8
+    4300022: Head_MeshPart9
+    4300024: Head_MeshPart10
+    4300026: Head_MeshPart11
+    4300028: Head_MeshPart12
+    4300030: Head_MeshPart13
+    4300032: Head_MeshPart14
+    4300034: Head_MeshPart15
+    4300036: Head_MeshPart16
+    4300038: Head_MeshPart17
+    4300040: Head_MeshPart18
+    4300042: Head_MeshPart19
+    4300044: Left_Foot
+    4300046: Left_Shoulder
+    4300048: Body
+    4300050: Right_Shoulder
+    4300052: Left_Thumb
+    4300054: Right_Foot
     7400000: Default Take
     9500000: //RootNode
   materials:

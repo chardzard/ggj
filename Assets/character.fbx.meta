@@ -1,0 +1,329 @@
+fileFormatVersion: 2
+guid: fcec1499c7b29d641af8ea45d23d4c61
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Body
+    100002: Camera
+    100004: //RootNode
+    100006: Head
+    100008: Head_MeshPart0
+    100010: Head_MeshPart1
+    100012: Head_MeshPart10
+    100014: Head_MeshPart11
+    100016: Head_MeshPart12
+    100018: Head_MeshPart13
+    100020: Head_MeshPart14
+    100022: Head_MeshPart15
+    100024: Head_MeshPart16
+    100026: Head_MeshPart17
+    100028: Head_MeshPart18
+    100030: Head_MeshPart19
+    100032: Head_MeshPart2
+    100034: Head_MeshPart3
+    100036: Head_MeshPart4
+    100038: Head_MeshPart5
+    100040: Head_MeshPart6
+    100042: Head_MeshPart7
+    100044: Head_MeshPart8
+    100046: Head_MeshPart9
+    100048: Lamp
+    100050: Left Foot
+    100052: Left Shoulder
+    100054: Left Thumb
+    100056: Right Foot
+    100058: Right Shoulder
+    100060: Right Thumb
+    100062: Trigger
+    400000: Body
+    400002: Camera
+    400004: //RootNode
+    400006: Head
+    400008: Head_MeshPart0
+    400010: Head_MeshPart1
+    400012: Head_MeshPart10
+    400014: Head_MeshPart11
+    400016: Head_MeshPart12
+    400018: Head_MeshPart13
+    400020: Head_MeshPart14
+    400022: Head_MeshPart15
+    400024: Head_MeshPart16
+    400026: Head_MeshPart17
+    400028: Head_MeshPart18
+    400030: Head_MeshPart19
+    400032: Head_MeshPart2
+    400034: Head_MeshPart3
+    400036: Head_MeshPart4
+    400038: Head_MeshPart5
+    400040: Head_MeshPart6
+    400042: Head_MeshPart7
+    400044: Head_MeshPart8
+    400046: Head_MeshPart9
+    400048: Lamp
+    400050: Left Foot
+    400052: Left Shoulder
+    400054: Left Thumb
+    400056: Right Foot
+    400058: Right Shoulder
+    400060: Right Thumb
+    400062: Trigger
+    2300000: Body
+    2300002: Head_MeshPart0
+    2300004: Head_MeshPart1
+    2300006: Head_MeshPart10
+    2300008: Head_MeshPart11
+    2300010: Head_MeshPart12
+    2300012: Head_MeshPart13
+    2300014: Head_MeshPart14
+    2300016: Head_MeshPart15
+    2300018: Head_MeshPart16
+    2300020: Head_MeshPart17
+    2300022: Head_MeshPart18
+    2300024: Head_MeshPart19
+    2300026: Head_MeshPart2
+    2300028: Head_MeshPart3
+    2300030: Head_MeshPart4
+    2300032: Head_MeshPart5
+    2300034: Head_MeshPart6
+    2300036: Head_MeshPart7
+    2300038: Head_MeshPart8
+    2300040: Head_MeshPart9
+    2300042: Left Foot
+    2300044: Left Shoulder
+    2300046: Left Thumb
+    2300048: Right Foot
+    2300050: Right Shoulder
+    2300052: Right Thumb
+    2300054: Trigger
+    3300000: Body
+    3300002: Head_MeshPart0
+    3300004: Head_MeshPart1
+    3300006: Head_MeshPart10
+    3300008: Head_MeshPart11
+    3300010: Head_MeshPart12
+    3300012: Head_MeshPart13
+    3300014: Head_MeshPart14
+    3300016: Head_MeshPart15
+    3300018: Head_MeshPart16
+    3300020: Head_MeshPart17
+    3300022: Head_MeshPart18
+    3300024: Head_MeshPart19
+    3300026: Head_MeshPart2
+    3300028: Head_MeshPart3
+    3300030: Head_MeshPart4
+    3300032: Head_MeshPart5
+    3300034: Head_MeshPart6
+    3300036: Head_MeshPart7
+    3300038: Head_MeshPart8
+    3300040: Head_MeshPart9
+    3300042: Left Foot
+    3300044: Left Shoulder
+    3300046: Left Thumb
+    3300048: Right Foot
+    3300050: Right Shoulder
+    3300052: Right Thumb
+    3300054: Trigger
+    4300000: Trigger
+    4300002: Right Thumb
+    4300004: Head_MeshPart0
+    4300006: Head_MeshPart1
+    4300008: Head_MeshPart2
+    4300010: Head_MeshPart3
+    4300012: Head_MeshPart4
+    4300014: Head_MeshPart5
+    4300016: Head_MeshPart6
+    4300018: Head_MeshPart7
+    4300020: Head_MeshPart8
+    4300022: Head_MeshPart9
+    4300024: Head_MeshPart10
+    4300026: Head_MeshPart11
+    4300028: Head_MeshPart12
+    4300030: Head_MeshPart13
+    4300032: Head_MeshPart14
+    4300034: Head_MeshPart15
+    4300036: Head_MeshPart16
+    4300038: Head_MeshPart17
+    4300040: Head_MeshPart18
+    4300042: Head_MeshPart19
+    4300044: Left Foot
+    4300046: Left Shoulder
+    4300048: Body
+    4300050: Right Shoulder
+    4300052: Left Thumb
+    4300054: Right Foot
+    7400000: Trigger|Bullet1|Take 001|BaseLayer
+    7400002: Trigger|Bullet2|Take 001|BaseLayer
+    7400004: Trigger|BulletCasing1|Take 001|BaseLayer
+    7400006: Trigger|BulletCasing2|Take 001|BaseLayer
+    7400008: Trigger|HeadAction
+    7400010: Trigger|Left ShoulderAction
+    7400012: Trigger|MovingParts|Take 001|BaseLayer
+    7400014: Trigger|Pump|Take 001|BaseLayer
+    7400016: Trigger|Right ShoulderAction
+    7400018: Trigger|Trigger|Take 001|BaseLayer
+    7400020: Trigger|Walking
+    7400022: Right Thumb|Bullet1|Take 001|BaseLayer
+    7400024: Right Thumb|Bullet2|Take 001|BaseLayer
+    7400026: Right Thumb|BulletCasing1|Take 001|BaseLayer
+    7400028: Right Thumb|BulletCasing2|Take 001|BaseLayer
+    7400030: Right Thumb|HeadAction
+    7400032: Right Thumb|Left ShoulderAction
+    7400034: Right Thumb|MovingParts|Take 001|BaseLayer
+    7400036: Right Thumb|Pump|Take 001|BaseLayer
+    7400038: Right Thumb|Right ShoulderAction
+    7400040: Right Thumb|Trigger|Take 001|BaseLayer
+    7400042: Right Thumb|Walking
+    7400044: Head|Bullet1|Take 001|BaseLayer
+    7400046: Head|Bullet2|Take 001|BaseLayer
+    7400048: Head|BulletCasing1|Take 001|BaseLayer
+    7400050: Head|BulletCasing2|Take 001|BaseLayer
+    7400052: Head|HeadAction
+    7400054: Head|Left ShoulderAction
+    7400056: Head|MovingParts|Take 001|BaseLayer
+    7400058: Head|Pump|Take 001|BaseLayer
+    7400060: Head|Right ShoulderAction
+    7400062: Head|Trigger|Take 001|BaseLayer
+    7400064: Head|Walking
+    7400066: Left Foot|Bullet1|Take 001|BaseLayer
+    7400068: Left Foot|Bullet2|Take 001|BaseLayer
+    7400070: Left Foot|BulletCasing1|Take 001|BaseLayer
+    7400072: Left Foot|BulletCasing2|Take 001|BaseLayer
+    7400074: Left Foot|HeadAction
+    7400076: Left Foot|Left ShoulderAction
+    7400078: Left Foot|MovingParts|Take 001|BaseLayer
+    7400080: Left Foot|Pump|Take 001|BaseLayer
+    7400082: Left Foot|Right ShoulderAction
+    7400084: Left Foot|Trigger|Take 001|BaseLayer
+    7400086: Left Foot|Walking
+    7400088: Left Shoulder|Bullet1|Take 001|BaseLayer
+    7400090: Left Shoulder|Bullet2|Take 001|BaseLayer
+    7400092: Left Shoulder|BulletCasing1|Take 001|BaseLayer
+    7400094: Left Shoulder|BulletCasing2|Take 001|BaseLayer
+    7400096: Left Shoulder|HeadAction
+    7400098: Left Shoulder|Left ShoulderAction
+    7400100: Left Shoulder|MovingParts|Take 001|BaseLayer
+    7400102: Left Shoulder|Pump|Take 001|BaseLayer
+    7400104: Left Shoulder|Right ShoulderAction
+    7400106: Left Shoulder|Trigger|Take 001|BaseLayer
+    7400108: Left Shoulder|Walking
+    7400110: Body|Bullet1|Take 001|BaseLayer
+    7400112: Body|Bullet2|Take 001|BaseLayer
+    7400114: Body|BulletCasing1|Take 001|BaseLayer
+    7400116: Body|BulletCasing2|Take 001|BaseLayer
+    7400118: Body|HeadAction
+    7400120: Body|Left ShoulderAction
+    7400122: Body|MovingParts|Take 001|BaseLayer
+    7400124: Body|Pump|Take 001|BaseLayer
+    7400126: Body|Right ShoulderAction
+    7400128: Body|Trigger|Take 001|BaseLayer
+    7400130: Body|Walking
+    7400132: Lamp|Bullet1|Take 001|BaseLayer
+    7400134: Lamp|Bullet2|Take 001|BaseLayer
+    7400136: Lamp|BulletCasing1|Take 001|BaseLayer
+    7400138: Lamp|BulletCasing2|Take 001|BaseLayer
+    7400140: Lamp|HeadAction
+    7400142: Lamp|Left ShoulderAction
+    7400144: Lamp|MovingParts|Take 001|BaseLayer
+    7400146: Lamp|Pump|Take 001|BaseLayer
+    7400148: Lamp|Right ShoulderAction
+    7400150: Lamp|Trigger|Take 001|BaseLayer
+    7400152: Lamp|Walking
+    7400154: Camera|Bullet1|Take 001|BaseLayer
+    7400156: Camera|Bullet2|Take 001|BaseLayer
+    7400158: Camera|BulletCasing1|Take 001|BaseLayer
+    7400160: Camera|BulletCasing2|Take 001|BaseLayer
+    7400162: Camera|HeadAction
+    7400164: Camera|Left ShoulderAction
+    7400166: Camera|MovingParts|Take 001|BaseLayer
+    7400168: Camera|Pump|Take 001|BaseLayer
+    7400170: Camera|Right ShoulderAction
+    7400172: Camera|Trigger|Take 001|BaseLayer
+    7400174: Camera|Walking
+    7400176: Right Shoulder|Bullet1|Take 001|BaseLayer
+    7400178: Right Shoulder|Bullet2|Take 001|BaseLayer
+    7400180: Right Shoulder|BulletCasing1|Take 001|BaseLayer
+    7400182: Right Shoulder|BulletCasing2|Take 001|BaseLayer
+    7400184: Right Shoulder|HeadAction
+    7400186: Right Shoulder|Left ShoulderAction
+    7400188: Right Shoulder|MovingParts|Take 001|BaseLayer
+    7400190: Right Shoulder|Pump|Take 001|BaseLayer
+    7400192: Right Shoulder|Right ShoulderAction
+    7400194: Right Shoulder|Trigger|Take 001|BaseLayer
+    7400196: Right Shoulder|Walking
+    7400198: Left Thumb|Bullet1|Take 001|BaseLayer
+    7400200: Left Thumb|Bullet2|Take 001|BaseLayer
+    7400202: Left Thumb|BulletCasing1|Take 001|BaseLayer
+    7400204: Left Thumb|BulletCasing2|Take 001|BaseLayer
+    7400206: Left Thumb|HeadAction
+    7400208: Left Thumb|Left ShoulderAction
+    7400210: Left Thumb|MovingParts|Take 001|BaseLayer
+    7400212: Left Thumb|Pump|Take 001|BaseLayer
+    7400214: Left Thumb|Right ShoulderAction
+    7400216: Left Thumb|Trigger|Take 001|BaseLayer
+    7400218: Left Thumb|Walking
+    7400220: Right Foot|Bullet1|Take 001|BaseLayer
+    7400222: Right Foot|Bullet2|Take 001|BaseLayer
+    7400224: Right Foot|BulletCasing1|Take 001|BaseLayer
+    7400226: Right Foot|BulletCasing2|Take 001|BaseLayer
+    7400228: Right Foot|HeadAction
+    7400230: Right Foot|Left ShoulderAction
+    7400232: Right Foot|MovingParts|Take 001|BaseLayer
+    7400234: Right Foot|Pump|Take 001|BaseLayer
+    7400236: Right Foot|Right ShoulderAction
+    7400238: Right Foot|Trigger|Take 001|BaseLayer
+    7400240: Right Foot|Walking
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
