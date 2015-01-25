@@ -10,6 +10,8 @@ public class AIController : MonoBehaviour {
 	private AbstractWeapon weapon;
 	public Vector3 weaponOffsetPosition;
 	public Quaternion weaponOffsetRotation;
+
+	public float actorRotationSpeed;
 	GameObject target;
 
 	void Start () {
@@ -21,19 +23,24 @@ public class AIController : MonoBehaviour {
 	
 	void Update () {
 		//Test firing stuff - aim at player and shoot
-		Vector3 directionalDistance = transform.position - target.transform.position;
+		Vector3 directionalDistance = target.transform.position - transform.position;
 		if (directionalDistance.magnitude < weapon.SuggestedRange) {
-			/*RaycastHit hitInfo;
-			Physics.Raycast(transform.position, directionalDistance, out hitInfo);
+			RaycastHit hitInfo;
+			Debug.DrawRay (transform.position, directionalDistance, Color.red);
+			bool castVal = Physics.Raycast(transform.position, directionalDistance, out hitInfo);
 			//If we can see target, face to it
-			if (hitInfo.rigidbody.gameObject == target) {
-				transform.Rotate (*/
+			if (hitInfo.transform != null && hitInfo.transform.gameObject == target) {
+				Vector3 direction = directionalDistance.normalized;
+				Debug.DrawRay (transform.position, direction, Color.blue);
+				transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), Time.deltaTime * actorRotationSpeed);
+				//Quaternion rotation = Quaternion.LookRotation(direction);
+				//transform.rotation = rotation;
 
-
-			if(weapon.CurrentAmmo > 0) {
-				weapon.Fire (gameObject, transform.rotation, rigidbody.velocity);
-			} else if (weapon.CurrentAmmo <= 0) {
-				//Swap back to default ammo
+				if (weapon.CurrentAmmo > 0 && castVal) {
+					weapon.Fire (gameObject, transform.rotation, rigidbody.velocity);
+				} else if (weapon.CurrentAmmo <= 0) {
+					//Swap back to default ammo
+				}
 			}
 		}
         if(health <= 0)
